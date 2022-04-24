@@ -19,4 +19,36 @@ public class Card {
 	public int value() {
 		return this.value;
 	}
+	
+	public boolean isSpade() {
+		if(this.suit == 1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean isDiamond() {
+		if(this.suit == 2) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean isClub() {
+		if(this.suit == 3) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean isHeart() {
+		if(this.suit == 4) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }
