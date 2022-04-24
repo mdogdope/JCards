@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Vector;
 
 public class Deck {
+	
 	private Vector<Card> deck = new Vector<>();
 	
 	public Deck() {
@@ -48,12 +49,29 @@ public class Deck {
 		}
 	}
 	
+	public void add(Card c) {
+		this.deck.add(c);
+	}
+	
 	public Card deal() {
 		return this.deck.remove(0);
 	}
 	
+	public Card deal(int index) {
+		return this.deck.remove(index);
+	}
+	
 	public Integer size() {
 		return this.deck.size();
+	}
+	
+	public boolean isEmpty() {
+		return this.deck.isEmpty();
+	}
+	
+	public Integer search(int suit, int value) {
+		Card search = new Card(suit, value);
+		return this.deck.indexOf(search);
 	}
 	
 }
