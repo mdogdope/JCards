@@ -14,8 +14,16 @@ public class Player {
 		this.hand.add(c);
 	}
 	
-	public Card getTop() {
+	public Card takeTop() {
 		return this.hand.remove(0);
+	}
+	
+	public Card takeCard(int index) {
+		return this.hand.remove(index);
+	}
+	
+	public Vector<Card> getHand() {
+		return this.hand;
 	}
 	
 	public Integer size() {
@@ -24,6 +32,10 @@ public class Player {
 	
 	public String getName() {
 		return this.name;
+	}
+	
+	public boolean isEmpty() {
+		return this.hand.isEmpty();
 	}
 	
 }
